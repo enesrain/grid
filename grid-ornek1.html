@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid örnek site</title>
+   <style>
+
+   body {
+    display: grid;
+    grid-template-rows: 170px 330px 330px 170px;
+    grid-gap: 5px;
+   }
+
+
+   header {
+    background-color: green;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+   }
+   .header-left {
+    background-color: yellow;
+   }
+   .header-center {
+    background-color: lightgreen;
+   }
+   .header-right {
+    background-color: blue;
+   }
+
+   
+   .main-top {
+    background-color: orange;
+   }
+
+
+   .main-bottom {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 50% 50%;
+   }
+  .main-left {
+    background-color: red;
+  }
+  .main-right {
+    background-color: black;
+  }
+
+
+   footer {
+    background-color: palevioletred;
+   }
+
+   </style>
+
+
+</head>
+<body>
+    <header>
+        <div class="header-left">Left</div>
+        <div class="header-center">Center</div>
+        <div class="header-right">Right</div>
+
+    </header>
+
+
+    <div class="main-top">Main-top</div>
+
+
+    <div class="main-bottom">
+        <div class="main-left"></div>
+        <div class="main-right"></div>
+    </div>
+
+
+    <footer>Footer</footer>
+</body>
+</html>

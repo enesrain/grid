@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-areas</title>
+
+<style>
+
+    body {
+        display: grid;
+      
+        grid-template-columns: 1fr 1fr 1fr;
+       grid-template-areas: " logo b link"
+                            "c c c "  /* 3 tane dive aynı area yı verdiğimizde satırı tamamını kapsarlar.*/
+                             "left center right"  /* altlı üstlü olan divlere aynı areayı verince birleşirler*/
+                             "footer footer right";
+                             
+                             
+    }
+    body div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+       border: 2px solid red;
+    }
+
+    .div4 {
+        grid-area: c;
+        background-color: green;
+        color: white;
+    }
+    .div5 {
+        grid-area: c;
+        background-color: green;
+        color: white;
+    }
+    .div6 {
+        grid-area: c;
+        background-color: green;
+        color: white;
+    }
+    /*------------------------*/
+    .div9 {
+        grid-area: right;
+        color: white;
+        background-color: blue;
+    }
+    .div12 {
+        grid-area: right;
+        color: white;
+        background-color: blue;
+    }
+</style>
+
+
+</head>
+<body>
+    
+<div class="div1">logo</div>
+<div class="div2">bosluk</div>
+<div class="div3">linkler</div>
+<div class="div4">c</div>
+<div class="div5">c</div>
+<div class="div6">c</div>
+<div class="div7">left</div>
+<div class="div8">center</div>
+<div class="div9">right</div>
+<div class="div10">footer</div>
+<div class="div11">footer</div>
+<div class="div12">right</div>
+
+
+
+
+</body>
+</html>

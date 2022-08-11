@@ -11,7 +11,7 @@
     body {
         display: grid;
       
-        grid-template-columns: 1fr 1fr 1fr;
+        
        grid-template-areas: " logo b link"
                             "c c c "  /* 3 tane dive aynı area yı verdiğimizde satırı tamamını kapsarlar.*/
                              "left center right"  /* altlı üstlü olan divlere aynı areayı verince birleşirler*/
@@ -19,6 +19,28 @@
                              
                              
     }
+    @media (max-width:700px) {  /* çözünürlük 700 altındayken tüm elemmanların alt alta durması için*/
+     
+        body{
+            grid-template-columns: 1fr;  
+            grid-template-areas: 
+                                "logo"
+                                "b"
+                                "link"
+                                "c"
+                                 "c"
+                                "c"
+                             "left"
+                              "center"
+                               "right" 
+                             "footer"
+                             "right";
+                             
+        }
+    }
+
+
+
     body div {
         display: flex;
         flex-direction: row;

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid tekrar</title>
+
+    <style>
+      /* Standart */
+      .standart {
+        height: 600px;
+        background-color: aquamarine;
+        padding: 10px;
+        margin: 20px;
+
+        display: grid;
+        grid-template-rows: 1fr 4fr 3fr 1fr;
+        gap: 5px;
+      }
+      .standart > div {
+        background-color: plum;
+      }
+      .standart > .div3 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+      .div3 :first-child {
+        background-color: palegreen;
+      }
+      .div3 :last-child {
+        background-color: palegoldenrod;
+      }
+
+      @media (max-width: 768px) {
+        .standart {
+          grid-template-rows: 1fr 4fr 6fr 1fr;
+        }
+        .standart > .div3 {
+          grid-template-columns: 100%;
+          grid-template-rows: 3fr 3fr;
+        }
+      }
+      /* -------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- standart----------------------------- -->
+    <div class="standart">
+      <div class="div1">Header</div>
+      <div class="div2">main top</div>
+
+      <div class="div3">
+        <div class="left">Left</div>
+
+        <div class="right">right</div>
+      </div>
+
+      <div class="div4">footer</div>
+    </div>
+
+
+
+  </body>
+</html>
